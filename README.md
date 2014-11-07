@@ -61,6 +61,6 @@ while `pre 'person.cs'` will overwrite 'person.cs' (as there is no `.pre` suffix
  ...**this works** because the start tag only has to be the last thing on the line, and the end tag only has to be 
  the first thing on the line. Any other text on tag start/end lines is assumed to be comments, and is discarded/replaced.
 
- ## Why? Why!?
+## Why? Why!?
  
- You can make living documents. Perhaps you're writing a book in markdown and you want sections to be self updating.
+You can make living documents. Perhaps you're writing a book in markdown and you want sections to be self updating.
