@@ -11,10 +11,10 @@
 # ascii art, courtesy of http://patorjk.com/software/taag/#p=display&f=Dr%20Pepper&t=pre!%0Acodeblocks%0A%0A
 ## 
 ## Commands:
-## pre($file)        <-- process a file, replacing codeblocks with their result.
+## pre $file        <-- process a file, replacing codeblocks with their result.
 ###                       write the result to the same file, with .pre removed from the name.
-###                       e.g. pre('person.cs.pre') will write to 'person.cs'
-###                       while pre('person.cs') will overwrite 'person.cs' (as there is no '.pre' to be replaced
+###                       e.g. pre 'person.cs.pre' will write to 'person.cs'
+###                       while pre 'person.cs' will overwrite 'person.cs' (as there is no '.pre' to be replaced
 ## pre_help          <-- help on pre
 ## pre_help_detailed <-- verbose help on pre, with details about codeblocks.
 ###              _       _    _            _       
