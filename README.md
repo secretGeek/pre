@@ -11,9 +11,9 @@
 *Commands:*
 
     pre $file        
-...process a file, replacing codeblocks with their result.
-write the result to the same file, with .pre removed from the name. e.g. `pre 'person.cs.pre' will write to 'person.cs'
-while pre 'person.cs' will overwrite 'person.cs' (as there is no '.pre' to be replaced
+...process a file, replacing "codeblocks" with their result.
+write the result to the same file, with  `.pre` suffix removed from the name. e.g. `pre 'person.cs.pre'` will write to 'person.cs'
+while `pre 'person.cs'` will overwrite 'person.cs' (as there is no `.pre` suffix to be replaced)
 
     pre_help
 ...help on pre
@@ -27,36 +27,40 @@ while pre 'person.cs' will overwrite 'person.cs' (as there is no '.pre' to be re
       \_|_.\___/\___|\___.|___/|_|\___/\_|_.|_\_\/__/
                                                  
  
- A codeblock is a {language:expression:} embedded in a text file that "pre" replaces with the result of their invokation.
- Currently there are two kinds of codeblocks that can be used: powershell, and sql.
+ A codeblock is a `{language:expression:}` embedded in a file that `pre` replaces with the result of its invocation.
+ Currently there are three kinds of codeblocks that can be used: powershell, sql and [NimbleText](http://NimbleText.com) patterns.
  
- powershell codeblocks look like this:
+ **powershell** codeblocks look like this:
  
     {powershell:
     dir c:\
     :}
  
- SQL codeblocks look like this, and are executed against the connection from $env:conn
+ **SQL** codeblocks look like this, and are executed against the connection from `$env:conn`
  
     {sql:
     select * from sysobjects
     :}
  
  
- NimbleText codeblocks look like this, and are mixed with the data from file named $env:ntdata
+ **NimbleText** codeblocks look like this, and are mixed with the data from file named `$env:ntdata`
  
     {nt:
     Hello $0 how are you.
     :}
     
- When pre is run, the codeblocks are replaced with the result of their execution.
+ When `pre` is run, the codeblocks are replaced with the result of their execution.
  The start and end tags of a code block must be on their own line. So you can't do this:
- {sql:select * from sysobjects:} <-- this won't work. *yet* 
+ `{sql:select * from sysobjects:}` <-- this won't work. *yet* 
  
  The start and end tags can be wrapped in whatever is the native multi-line comment for the platform, e.g.
  
      /* {powershell:
      dir c:\
      :} */
- ...this works because the start tag only has to be the last thing on the line, and the end tag only has to be 
+ ...**this works** because the start tag only has to be the last thing on the line, and the end tag only has to be 
  the first thing on the line. Any other text on tag start/end lines is assumed to be comments, and is discarded/replaced.
+
+ ## Why? Why!?
+ 
+ You can make living documents. Perhaps you're writing a book in markdown and you want sections to be self updating.
