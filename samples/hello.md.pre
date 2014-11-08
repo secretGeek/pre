@@ -1,0 +1,10 @@
+## This is a simple markdown document
+
+It also contains some dynamically rendered regions, using pre.
+
+{powershell:
+get-process | sort  -property WS -descending  | select -first 5
+:}
+
+That's the processes.
+
