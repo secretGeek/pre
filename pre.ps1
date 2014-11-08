@@ -87,7 +87,7 @@ function pre([string]$file) {
 					# todo: don't hardcode the pattern 
                     $codeblock = prepare-nt($codeblock);
 				}
-                write-host $codeblock;
+                #write-host $codeblock;
 				Invoke-expression $codeblock; 
 				$mode = "normal";
 				$codeblock = "";

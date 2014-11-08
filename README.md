@@ -64,3 +64,5 @@ while `pre 'person.cs'` will overwrite 'person.cs' (as there is no `.pre` suffix
 ## Why? Why!?
  
 You can make living documents. Perhaps you're writing a book in markdown and you want sections to be self updating.
+
+Perhaps you want a light sprinkling of code generation inside your projects.
