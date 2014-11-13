@@ -8,6 +8,7 @@ dir . *.pre -recurse | % {
         $folder = $_.Directory.Name;
         write-host $folder.replace("_", " ")... -foregroundcolor "white"
     }
+    pre $_.FullName
     $testsRun = $testsRun + 1;
     $actualFile = $_.FullName.trimend(".pre"); 
     $expectedFile = $_.FullName.trimend(".pre") + ".expected"; 
