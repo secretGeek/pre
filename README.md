@@ -51,7 +51,8 @@ while `pre 'person.cs'` will overwrite 'person.cs' (as there is no `.pre` suffix
     
  When `pre` is run, the codeblocks are replaced with the result of their execution.
  The start and end tags of a code block must be on their own line. So you can't do this:
- `{sql:select * from sysobjects:}` <-- this won't work. *yet* 
+
+ `{sql:select * from sysobjects:}` **&larr; this won't work. *yet*** 
  
  The start and end tags can be wrapped in whatever is the native multi-line comment for the platform, e.g.
  

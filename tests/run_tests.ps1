@@ -24,5 +24,9 @@ dir . *.pre -recurse | % {
         write-host "`t" $actual.trimend(".md").replace("_", " ") " Passed!" -foregroundcolor "green";
     }    
  }
- 
- write-host "$testsRun tests run, $testsFailed failed";
+ write-host "$testsRun tests run, $testsFailed failed" -foregroundcolor (&{if($testsFailed -eq 0){"green"} Else {"Red"}})
+ if ($testsFailed -ne 0) {
+    write-host "FAILURE!!!! :(" -foregroundcolor "red";
+ } else {
+   write-host "Success. ;)" -foregroundcolor "green";
+ }
