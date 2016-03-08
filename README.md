@@ -4,7 +4,7 @@
      |  _/|_|  \___.<_>
      |_|
      
-#PRE! The friendly pre-processor.
+# PRE! The friendly pre-processor.
  
 **MIT License. Leon Bambrick 2014**
  
@@ -67,3 +67,17 @@ while `pre 'person.cs'` will overwrite 'person.cs' (as there is no `.pre` suffix
 You can make living documents. Perhaps you're writing a book in markdown and you want sections to be self updating.
 
 Perhaps you want a light sprinkling of code generation inside your projects.
+
+## Getting started...
+
+Dot source the file `pre.ps1`. i.e, run this:
+
+
+    . .\pre.ps1
+
+...perhaps as part of your `$PROFILE`.
+
+Thereafter you will have the 3 functions available:
+  * pre
+  * pre_help
+  * pre_help_detailed
